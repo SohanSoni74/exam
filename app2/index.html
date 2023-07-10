@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        color: blue;
+        text-align: center;
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+   
+    <table>
+      <tr>
+        <td>UserName</td>
+        <td><input type="text" class="form-control" id="UserName"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="text" class="form-control" id="Password"></td>
+      </tr>  <tr>
+        <td>Email</td>
+        <td><input type="text" class="form-control" id="Email"></td>
+      </tr> 
+       <tr>
+        <td>Age</td>
+        <td><input type="text" class="form-control" id="Age"></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td><input type="radio" class="form-control" id="Gender">Male</td>
+        <td><input type="radio" class="form-control" id="Gender">Female</td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" class="form-control" id="Address"></td>
+      </tr>
+      <tr>
+        <td>10th%</td>
+        <td><input type="text" class="form-control" id="ten"></td>
+      </tr>
+      <tr>
+        <td>12th%</td>
+        <td><input type="text" class="form-control" id="twele"></td>
+      </tr>
+      <tr>
+        <td>Degree</td>
+        <td><input type="text" class="form-control" id="Degree"></td>
+      </tr>
+      <tr>
+        <td>University</td>
+        <td><input type="text" class="form-control" id="University"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+           <button onclick="AddRecord()">Register</button>
+
+        </td>
+    </tr>
+    </table>
+
+    <script>
+       var refTotxtUsername = document.getElementById("Username");
+        var refTotxtPassword = document.getElementById("Password");
+        var refTotxtEmail = document.getElementById("Email");
+        var refTotxtAge = document.getElementById("Age");
+        var refTotxtGender = document.getElementById("Gender");
+        var refTotxtAddress = document.getElementById("Address");
+        var refTotxtten = document.getElementById("ten");
+        var refTotxttwele = document.getElementById("twele");
+        var refTotxtDegree = document.getElementById("Degree");
+        var refTotxtUniversity = document.getElementById("University");
+    function AddRecord(){
+        sessionStorage.setItem("Username", refTotxtUsername.value);
+        sessionStorage.setItem("Password", refTotxtPassword.value);
+        sessionStorage.setItem("Email", refTotxtEmail.value);
+        sessionStorage.setItem("Age", refTotxtAge.value);
+        sessionStorage.setItem("Gender", refTotxtGender.value);
+        sessionStorage.setItem("Address", refTotxtAddress.value);
+        sessionStorage.setItem("ten", refTotxtten.value);
+        sessionStorage.setItem("twele", refTotxttwele.value);
+        sessionStorage.setItem("Degree", refTotxtDegree.value);
+        sessionStorage.setItem("University", refTotxtUniversity.value);
+        
+    }
+    </script>
+  </body>
+</html>
